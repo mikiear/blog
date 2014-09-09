@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{% block title %}Bienvenido a Synfony2!{% endblock %}</title>
+<meta http-equiv="Content-Language" content="English" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}" media="screen" />
+<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+{% block stylesheets %}{% endblock %}
+</head>
+<body>
+<div id="wrap">
+
+<div id="top"></div>
+
+<div id="content">
+
+<div class="header">
+<h1><a href="#">Blue Freedom</a></h1>
+<h2>Free xhtml/css Template</h2>
+</div>
+
+{% block breadcrumb %}
+<div class="breadcrumbs">
+<a href="#">Home</a> &middot; Ud. está aquí
+</div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+		
+<div class="right">
+		
+<h2>Navigation</h2>
+
+<ul>
+<li><a href="http://www.minimalistic-design.net">Minimalistic Design</a></li>
+<li><a href="http://www.oswd.org">Open Source Web Design</a></li>
+<li><a href="http://www.opendesigns.org">Open Designs</a></li>
+<li><a href="http://www.openwebdesign.org">Open Web Design</a></li>
+<li><a href="http://www.iollo.com">Iollo's review highway</a></li>
+<li><a href="http://www.historyexplorer.net">History Timelines</a></li>
+<li><a href="http://www.quakerparrot.info">Quaker Parrot</a></li>
+<li><a href="http://www.moneybookersclub.com">Moneybookers Club</a></li>
+</ul>
+		
+</div>
+
+<div id="clear"></div>
+
+</div>
+
+<div id="bottom"></div>
+
+</div>
+
+<div id="footer">
+Design by <a href="http://www.minimalistic-design.net">Minimalistic Design</a>
+</div>
+
+</body>
+
+{% block javascripts %}{% endblock %}
+</html>

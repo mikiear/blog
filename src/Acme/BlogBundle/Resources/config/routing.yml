@@ -1,0 +1,3 @@
+BlogBundle_post:
+        resource: "@BlogBundle/Resources/config/routing/entradas.yml"
+        prefix:   /entradas

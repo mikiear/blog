@@ -1,0 +1,70 @@
+<?php
+
+namespace Acme\BlogBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Comment
+ *
+ * @ORM\Table(name="comment", indexes={@ORM\Index(name="IDX_9474526CA688222A", columns={"entrada_id"})})
+ * @ORM\Entity
+ */
+class Comment
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="user", type="string", length=255, nullable=false)
+     */
+    private $user;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="comment", type="text", nullable=false)
+     */
+    private $comment;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="approved", type="boolean", nullable=false)
+     */
+    private $approved;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created", type="datetime", nullable=false)
+     */
+    private $created;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated", type="datetime", nullable=false)
+     */
+    private $updated;
+
+    /**
+     * @var \Entradas
+     *
+     * @ORM\ManyToOne(targetEntity="Entradas")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="entrada_id", referencedColumnName="id")
+     * })
+     */
+    private $entrada;
+
+
+}

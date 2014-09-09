@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+
+{% block breadcrumb %}
+<div class="breadcrumbs">
+<a href="#">Home</a> &middot; Entradas del blog
+</div>
+{% endblock %}
+
+{% block content -%}
+    <h1 class=header>Entradas del Blog</h1>
+
+   	<div class="middle">
+			        {% for entity in entities %}
+					<h2>{{ entity.title }}</h2>
+								{{ entity.body }}
+					<br />
+					<a href="{{ path('entradas_show', { 'id': entity.id }) }}" title="Ver mas">+</a>
+
+					<br /><br />
+					<img src="/~user03/blog/web/css/images/minimal.jpg" alt="Preview of Minimalistic Template" />
+					{% endfor %}
+	</div>
+
+					
+
+
+   {% endblock %}
